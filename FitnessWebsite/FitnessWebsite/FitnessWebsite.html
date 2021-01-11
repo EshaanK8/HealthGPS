@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html class="page1">
+<head>
+    <meta charset="utf-8" />
+    <!--CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="FitnessWebsite.css" rel="stylesheet" type="text/css" />
+    <title>Step 1: Calculate your BMI</title>
+</head>
+<body style="min-width: 960px;">
+
+    <div class="card">
+
+        <div class="headerBox">
+            <h1 class="header">Step 1: Calculate Your BMI</h1>
+        </div>
+
+
+        <!--Height Input-->
+        <div class="height">
+            <div class="heightBox1">
+                <!--Option Box for ft/m-->
+                <div class="heightSubBox">
+                    <div class="heightInputBox">
+
+                        <div class="heightLabel">
+                            <label id="heightLabel">Height</label>
+                        </div>
+
+                        <div class="heightInputDiv">
+                            <input type="number" id="heightInput" autocomplete="off" maxlength="3" name="txt_name" style="display:inline-block;" onkeypress="return bmiCalc.isNumberKey(event)">
+                        </div>
+
+                        <div class="errorLabel">
+                            <label id="heightErrorLabel"></label>
+                        </div>
+
+                    </div>
+
+                    <div class="heightUnitDiv">
+                        <form oninput="bmiCalc.checkUnits(); bmiCalc.removeLabel();">
+                            <!--Checks if ft is selected, and makes Inches box available-->
+                            <label for="heightUnit"></label>
+                            <select id="heightUnit" class="UnitBox">
+                                <option id="ft" value="ft">ft</option>
+                                <option id="cm" value="cm">cm</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!--Input for Inches-->
+            <div class="heightBox2">
+                <!--Box for Inches-->
+                <div class="heightInputInches">
+                    <input type="number" id="heightInputIn" autocomplete="off" maxlength="3" name="txt_name" style="display:inline-block;" placeholder="Inches" onkeypress="return bmiCalc.isNumberKey(event)">
+                </div>
+
+                <div id="heightInErrorBox" class="errorLabel">
+                    <label id="heightInErrorLabel"></label>
+                </div>
+
+                <form id="InchesForm" style="display:inline-block;">
+                </form>
+            </div>
+        </div>
+
+
+        <!--Weight Input-->
+        <div class="weight">
+            <div class="weightBox1">
+                <!--Option Box for lb/kg-->
+                <div class="weightSubBox">
+                    <div class="weightInputBox">
+                        <div class="weightLabel">
+                            <label>Weight</label>
+                        </div>
+
+                        <div class="weightInputDiv">
+                            <input type="number" id="weightInput" autocomplete="off" maxlength="3" name="txt_name" style="display:inline-block;" onkeypress="return bmiCalc.isNumberKey(event)">
+                        </div>
+
+                        <div class="errorLabel">
+                            <label id="weightErrorLabel"></label>
+                        </div>
+
+                    </div>
+
+                    <div class="weightUnitDiv">
+                        <form oninput="bmiCalc.checkUnits()">
+                            <!--Checks if ft is selected, and makes Inches box available-->
+                            <label for="weightUnit"></label>
+                            <select id="weightUnit" class="UnitBox">
+                                <option id="lb" value="lb">lb</option>
+                                <option id="kg" value="kg">kg</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="calculateBox">
+                    <button class="btn" id="calculateBtn" onclick="bmiCalc.calculateBMI(); bmiCalc.moveArrow(); bmiCalc.checkValidInput();">Calculate</button>
+                </div>
+            </div>
+
+            <!--Scale Box-->
+            <div class="scaleBox">
+                <div id="bmiLabel">
+                    <h1 id="bmiOutput"></h1>
+                </div>
+
+
+                <div id="scale">
+                    <img id="scaleImg" src="BMIscale.png" />
+                </div>
+
+                <div id="container">
+                    <div id="animate">
+                        <img id="arrow" src="arrow.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Next Button-->
+        <div id="nextBox">
+            <button class="btn" id="nextBtn" onclick="bmiCalc.nextBtn(); bmiCalc.checkValidInput();">Next</button>
+        </div>
+    </div>
+
+    <!--Javascript-->
+    <script src="FitnessWebsite.js"></script>
+</body>
+</html>
+
+`   

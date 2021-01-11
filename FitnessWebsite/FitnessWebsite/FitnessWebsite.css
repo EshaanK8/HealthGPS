@@ -1,0 +1,555 @@
+﻿/*------------------------------------------------------------PAGE 1------------------------------------------------------------*/
+html {
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+input::placeholder {
+    color: grey;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-image: url("BMIbackground.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: center; /* Center the image */
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/*-------------Header--------------*/
+.headerBox {
+    margin-right: 0%;
+    margin-left: 0%;
+    flex: 8;
+}
+
+.header {
+    padding-top: 0%;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+/*-------------Card--------------*/
+.card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: Monaco,Consolas,Lucida Console,monospace;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #747fe0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    height: 80%;
+    border-radius: 2px;
+    opacity: 0.8;
+}
+/*-------------Height--------------*/
+.height {
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.heightBox1 {
+    flex: 0.77;
+    margin-left:0%;
+}
+
+.heightBox2 {
+    flex: 2;
+    padding-right: 0%;
+    margin-left: 5%;
+}
+
+.heightSubBox {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.heightInputBox {
+    display:flex;
+    flex-direction:column;
+    margin-left: 0%;
+}
+
+.heightLabel {
+    flex: 1;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.heightInputDiv {
+    flex: 5;
+}
+
+#heightLabel {
+    margin-left: 0%;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#heightInput {
+    margin-left:0%;
+}
+
+.heightUnitDiv {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#heightUnit {
+    margin-left: 0%;
+    margin-top: 0%;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    border-radius: 6px;
+}
+
+.heightInputInches {
+    margin-left: 0%;
+    margin-top: 2.2%;
+    width:30%;
+}
+
+#heightInputIn {
+    margin-top:0%;
+    margin-right: 100%;
+}
+
+#InLabel {
+    margin-right: 100%;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/*-------------Weight--------------*/
+.weight {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+}
+
+.weightBox1 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.weightSubBox {
+    display: flex;
+    flex: 0.5;
+    flex-direction: row;
+}
+
+.weightInputBox {
+    display:flex;
+    flex-direction:column;
+    margin-left: 0%;
+    margin-top: 10%;
+    height:20%;
+}
+
+.weightLabel {
+    flex: 1;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.weightInputDiv {
+    flex: 5;
+}
+
+.weightInput {
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+#weightUnit {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    border-radius: 6px;
+}
+
+.weightUnitDiv {
+    margin-top: 16.5%;
+    margin-left: 5%;
+}
+
+/*-------------Scale Box--------------*/
+.scaleBox {
+    margin-top: 0%;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+#bmiLabel {
+    padding-top: 0px;
+    padding-bottom: 2%;
+    margin-top: 0%;
+    margin-left: 28.5%;
+    width: 60%;
+    height: 20%;
+}
+
+#bmiOutput {
+    color:black;
+    width: 100%;
+    margin-top: 10%;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+#scale {
+    margin-top: 0%;
+}
+
+#scale img {
+    width: 90%;
+}
+
+#container {
+    position: relative;
+    margin-left: 22.8%;
+    width: 73.2%;
+    height: 20%;
+}
+
+#arrow {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+/*-------------Unit Box--------------*/
+.UnitBox {
+    background: #3D94F6;
+    display: inline;
+    color: #fff;
+    padding: 10%;
+    border: none;
+    box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    font-size: 20px;
+    -webkit-appearance: button;
+    outline: none;
+}
+
+
+/*-------------Buttons--------------*/
+
+.btn {
+    color: #747fe0 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    border: 4px solid #3D94F6 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+}
+
+.btn:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+}
+
+#calculateBox {
+    margin-right:30%;
+}
+
+#calculateBtn {
+    padding: 4%;
+    margin-left: 0%;
+    font-size: 15px;
+}
+
+#nextBtn {
+    width:20%;
+    font-size:20px;
+    margin-bottom:5%;
+    padding:1%;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------PAGE 2------------------------------------------------------------*/
+
+/*------------------Header-----------------------*/
+.headerBox {
+    flex: 0.8;
+}
+
+/*------------------Main-----------------------*/
+.main {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+}
+
+/*------Data----------*/
+.data {
+    display:flex;
+    flex-direction:row;
+    flex:1;
+}
+
+.labels {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    flex: 1;
+    display:flex;
+    flex-direction:column;
+}
+
+.ageInput {
+    display:flex;
+    flex-direction:row;
+    flex: 2;
+}
+
+.ageLabelBox {
+    flex: 1;
+}
+
+#ageLabel {
+    float: left;
+    margin-left: 30%;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.ageInputBox {
+    flex: 4;
+    display:flex;
+    flex-direction:column;
+}
+
+#ageInputSmall {
+    float: left;
+}
+
+.sexInput {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+}
+
+.sexLabelBox {
+    flex: 1;
+}
+
+#sexLabel {
+    float: left;
+    margin-left: 30%;
+    margin-top: 5%;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.sexInputBox {
+    flex: 4;
+}
+
+#sexOption {
+    padding: 1%;
+    border-radius: 6px;
+    float: left;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.alLabelBox {
+    flex: 1;
+}
+
+#alLabel {
+    float: left;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-left: -5%;
+    margin-top:2%;
+}
+
+.alInputBox {
+    flex: 4;
+}
+
+#alOption {
+    padding: 0%;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 6px;
+    float: left;
+}
+
+.goalLabelBox {
+    flex: 1;
+}
+
+#goalLabel {
+    float: left;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+
+.goalInputBox {
+    flex: 4;
+}
+
+#goalOption {
+    padding: 0%;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 6px;
+    float: left;
+}
+
+
+/*----------Output----------*/
+.output {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 500 !important;
+}
+
+.outputBox {
+    background-color: #84CEEB;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100%;
+}
+
+.outputTextCalories {
+    font-size: 20px;
+    font-weight: 500 !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#bmrOutputText {
+}
+
+#calorieOutputText {
+    margin-top: 25%;
+}
+
+
+
+/*---------------Error Output----------*/
+#heightErrorLabel {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color:red;
+}
+
+#heightInErrorLabel {
+    margin-left:0%;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: red;
+}
+
+#heightInErrorBox {
+    width:30%;
+}
+
+
+#weightErrorLabel{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: red;
+}
+
+#ageErrorLabel {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: red;
+    margin-right:8%;
+    margin-top:2%;
+}
+
+/*---------------Calculate Button----------*/
+.calcCalories {
+}
+
+#calcCaloriesBtn {
+    float: left;
+    padding: 1%;
+    margin-left: 5%;
+    font-size: 15px;
+}
+
+
+
+/*------------------Footer-----------------------*/
+.footer {
+    flex: 1;
+    display:flex;
+    flex-direction:row;
+}
+
+#nextCaloriesBtn {
+    height:40%;
+    margin-top: 5%;
+    width: 20%;
+    font-size: 20px;
+    padding:0%;
+}
+
+#previousCaloriesBtn {
+    height: 40%;
+    margin-left: 25%;
+    margin-right: 5%;
+    margin-top: 5%;
+    width: 20%;
+    font-size: 20px;
+    padding: 0%;
+}
+
+
+
+

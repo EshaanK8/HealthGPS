@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ItemType>GenericProject</ItemType>
+    <ProjectGuid>{8C2D0179-A292-4B70-A667-59238247F223}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="FitnessWebsite.html" />
+    <None Include="FitnessWebsite.js" />
+    <None Include="FitnessWebsite.css" />
+    <None Include="calorieCalc.html" />
+    <None Include="..\..\Slider\Slider.css" />
+    <None Include="..\..\Slider\Slider.html" />
+    <None Include="Slider.js" />
+    <None Include="..\..\Slider\Slider.js" />
+  </ItemGroup>
+</Project>

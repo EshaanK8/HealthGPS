@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html class="page2">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="FitnessWebsite.css" rel="stylesheet" type="text/css" />
+    <title></title>
+</head>
+<body>
+    <div class="card">
+        <div class="headerBox">
+            <h1 class="header">Step 2: Your Daily Calorie Intake</h1>
+        </div>
+        <div class="main">
+            <div class="data">
+
+                <div class="labels">
+                    <div class="ageLabelBox"><label id="ageLabel">Age:</label></div>
+                    <div class="sexLabelBox"><label id="sexLabel" for="sexOption">Sex:</label></div>
+                    <div class="alLabelBox"><label id="alLabel" for="alOption">Activity Level:</label></div>
+                    <div class="goalLabelBox"><label id="goalLabel" for="goalOption">Goal:</label></div>
+                </div>
+
+                <div class="input">
+                    <div class="ageInputBox">
+                         <input type="number" id="ageInputSmall" autocomplete="off" maxlength="3" name="txt_name" style="display:inline-block;" placeholder="Inches" onkeypress="return bmiCalc.isNumberKey(event)"/>
+                         <label id="ageErrorLabel"></label>
+                    </div>
+                    
+                    <div class="sexInputBox">
+                        <form>
+                            <select id="sexOption" class="UnitBox">
+                                <option id="male" value="male">Male</option>
+                                <option id="female" value="female">Female</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="alInputBox">
+                        <form>
+                            <select id="alOption" class="UnitBox">
+                                <option id="sedentary" value="sedentary">Sedentary - little to no exercise</option>
+                                <option id="light" value="light">Light- 1 to 3 times/week- </option>
+                                <option id="moderate" value="moderate">Moderate- 4 to 5 times/week- </option>
+                                <option id="active" value="active">Active- daily exercise or intense exercise 3-4 times/week </option>
+                                <option id="veryActive" value="veryActive"> Very Active- intense exercise 6-7 times/week </option>
+                                <option id="extraActive" value="extraActive">Extra Active- very intense exercise daily, or a physical job </option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="goalInputBox">
+                        <form>
+                            <select id="goalOption" class="UnitBox">
+                                <option id="loseWeight" value="loseWeight">Lose Weight</option>
+                                <option id="maintenance" value="maintenance">Maintenance </option>
+                                <option id="gainWeight" value="gainWeight">Gain Weight </option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="output">
+                <div class="outputBox">
+                    <p class="outputTextCalories" id="bmrOutputText">Your Basal Metabolic Rate (BMR) is: </p>
+                    <p class="outputTextCalories" id="bmrOutput">________ </p>
+                    <p class="outputTextCalories" id="calorieOutputText">Based on your goal, your daily calorie intake should be: </p>
+                    <p class="outputTextCalories" id="calorieOutput">________ </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="calcCalories">
+            <button id="calcCaloriesBtn" class="btn" onclick="calorieCalc.calculateBMR(); calorieCalc.calculateCalories(); calorieCalc.checkValidInputAge();">Calculate</button>
+        </div>
+        
+
+        <div class="footer">
+            <button id="previousCaloriesBtn" class="btn" onclick="window.location.href = 'FitnessWebsite.html';">Previous</button>
+            <button id="nextCaloriesBtn" class="btn">Next</button>
+        </div>
+    </div>
+    <!--Javascript-->
+    <script src="FitnessWebsite.js"></script>
+</body>
+</html>
